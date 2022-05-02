@@ -1,7 +1,6 @@
 # Introduction
 
-This is a sample e-commerce application built.
-
+This is a sample e-commerce application deployment manually and by using an automation script(shell script)
 Here's how to deploy it on linux environment [ CentOS ] systems:
 
 ## Deploy Pre-Requisites
