@@ -1,10 +1,11 @@
 # Introduction
 
-This is a sample e-commerce application built for learning purposes.
+This is a sample e-commerce application built.
 
-Here's how to deploy it on CentOS systems:
+Here's how to deploy it on linux environment [ CentOS ] systems:
 
 ## Deploy Pre-Requisites
+------------------------
 
 1. Install FirewallD
 
@@ -15,12 +16,13 @@ sudo systemctl enable firewalld
 ```
 
 ## Deploy and Configure Database
+--------------------------------
 
 1. Install MariaDB
 
 ```
 sudo yum install -y mariadb-server
-sudo vi /etc/my.cnf
+sudo vi /etc/my.cnf    # Default config file of mariadb
 sudo service mariadb start
 sudo systemctl enable mariadb
 ```
@@ -36,9 +38,9 @@ sudo firewall-cmd --reload
 
 ```
 $ mysql
-MariaDB > CREATE DATABASE ecomdb;
-MariaDB > CREATE USER 'ecomuser'@'localhost' IDENTIFIED BY 'ecompassword';
-MariaDB > GRANT ALL PRIVILEGES ON *.* TO 'ecomuser'@'localhost';
+MariaDB > CREATE DATABASE ecomdb;   # create databaase 
+MariaDB > CREATE USER 'ecomuser'@'localhost' IDENTIFIED BY 'ecompassword';  # Create user and password
+MariaDB > GRANT ALL PRIVILEGES ON *.* TO 'ecomuser'@'localhost';  # permission for user
 MariaDB > FLUSH PRIVILEGES;
 ```
 
@@ -91,11 +93,11 @@ sudo service httpd start
 sudo systemctl enable httpd
 ```
 
-4. Download code
+4. Download code for github
 
 ```
 sudo yum install -y git
-git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/html/
+git clone https://github.com/zahir012/2_Tier_ecommerce_app_deploy.git /var/www/html/
 ```
 
 5. Update index.php
